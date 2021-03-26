@@ -519,6 +519,240 @@
 			]
 		},
 		{
+			"name": "allQuery",
+			"item": [
+				{
+					"name": "allQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Query content\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Empty body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.body).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Query content\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Empty body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.body).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Query content\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Empty body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.body).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Query content\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Empty body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.body).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "allHeaders",
 			"item": [
 				{
@@ -797,6 +1031,352 @@
 							],
 							"path": [
 								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "allHeadersBodyQuery",
+			"item": [
+				{
+					"name": "allHeadersBodyQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Has body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(JSON.stringify(jsonData.body)).to.eql(pm.variables.get(\"body_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has query\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has headers\", function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_1\")]).to.eql(pm.variables.get(\"header_content_1\"));",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_2\")]).to.eql(pm.variables.get(\"header_content_2\"));",
+									"",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{header_title_1}}",
+								"value": "{{header_content_1}}",
+								"type": "text"
+							},
+							{
+								"key": "{{header_title_2}}",
+								"value": "{{header_content_2}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_content}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allHeadersBodyQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Has body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(JSON.stringify(jsonData.body)).to.eql(pm.variables.get(\"body_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has query\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has headers\", function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_1\")]).to.eql(pm.variables.get(\"header_content_1\"));",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_2\")]).to.eql(pm.variables.get(\"header_content_2\"));",
+									"",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{header_title_1}}",
+								"type": "text",
+								"value": "{{header_content_1}}"
+							},
+							{
+								"key": "{{header_title_2}}",
+								"type": "text",
+								"value": "{{header_content_2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_content}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allHeadersBodyQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Has body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(JSON.stringify(jsonData.body)).to.eql(pm.variables.get(\"body_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has query\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has headers\", function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_1\")]).to.eql(pm.variables.get(\"header_content_1\"));",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_2\")]).to.eql(pm.variables.get(\"header_content_2\"));",
+									"",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "{{header_title_1}}",
+								"type": "text",
+								"value": "{{header_content_1}}"
+							},
+							{
+								"key": "{{header_title_2}}",
+								"type": "text",
+								"value": "{{header_content_2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_content}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allHeadersBodyQuery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Has the core objects\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData)).to.eql([\"body\",\"query\",\"headers\"]);",
+									"});",
+									"",
+									"pm.test(\"Has body\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(JSON.stringify(jsonData.body)).to.eql(pm.variables.get(\"body_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has query\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.query).to.eql(pm.variables.get(\"query_content\"));",
+									"});",
+									"",
+									"pm.test(\"Has headers\", function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_1\")]).to.eql(pm.variables.get(\"header_content_1\"));",
+									"    pm.expect(jsonData.headers[pm.variables.get(\"header_title_2\")]).to.eql(pm.variables.get(\"header_content_2\"));",
+									"",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "{{header_title_1}}",
+								"type": "text",
+								"value": "{{header_content_1}}"
+							},
+							{
+								"key": "{{header_title_2}}",
+								"type": "text",
+								"value": "{{header_content_2}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{body_content}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/{{query_content}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"{{query_content}}"
 							]
 						}
 					},
