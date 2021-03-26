@@ -20,7 +20,7 @@ app.use(logger);
 
 const returner = (req) => ({
     "body":req.body,
-    "query":req.params?.p || "",
+    "query":req.params.p || "",
     "headers":req.headers
 });
 
