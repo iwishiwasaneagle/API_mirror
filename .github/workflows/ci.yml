@@ -37,12 +37,12 @@ jobs:
       - name: Start Server and Run Tests
         run: |
           npm run start & 
-		  API_PID=$!
-          newman run API_mirror.postman.json
-		  if [ -z "$(ps aux | grep $API_PID | grep -v grep)" ]
-		  then
-			echo "No server running. Check logs for crashes.";
-			return 1;
-		  else
+	  API_PID=$!;
+	  newman run tests/API_mirror.postman_collection.json -e tests/API_mirror.postman_environment.json
+	  if [ -z "$(ps aux | grep $API_PID | grep -v grep)" ]
+	  then
+		echo "No server running. Check logs for crashes.";
+		return 1;
+	  else
 			kill -9 $API_PID;
 		  fi
